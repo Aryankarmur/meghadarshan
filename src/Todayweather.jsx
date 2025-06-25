@@ -13,9 +13,9 @@ import Freezingdrizzle from "./assets/weather-icons/freezingdrizzle.png";
 import Freezingrain from "./assets/weather-icons/freezing-rain.png";
 import Lightrain from "./assets/weather-icons/lightrain.png";
 import Lightsnow from "./assets/weather-icons/lightsnow.png";
-import Thundershowers from "./assets/weather-icons/thunderstorm.png";
-import Thundershowershail from "./assets/weather-icons/thunderstorm&hail.png";
-import Thundershowersheavyhail from "./assets/weather-icons/thunderstorm&heavy hail.png";
+import Thundershowers from "./assets/weather-icons/Thunderstorm.png";
+import Thundershowershail from "./assets/weather-icons/Thunderstorm&hail.png";
+import Thundershowersheavyhail from "./assets/weather-icons/Thunderstorm&heavy hail.png";
 import Rainshowers from "./assets/weather-icons/rainshowers.png";
 
 const Todayweather = ({ weatherData }) => {

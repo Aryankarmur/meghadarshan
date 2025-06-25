@@ -13,9 +13,9 @@ import Freezingdrizzle from "./assets/weather-icon/freezingdrizzle.png";
 import Freezingrain from "./assets/weather-icon/freezing-rain.png";
 import Lightrain from "./assets/weather-icon/lightrain.png";
 import Lightsnow from "./assets/weather-icon/lightsnow.png";
-import Thundershowers from "./assets/weather-icon/thunderstorm.png";
-import Thundershowershail from "./assets/weather-icon/thunderstorm&hail.png";
-import Thundershowersheavyhail from "./assets/weather-icon/thunderstorm&heavy hail.png";
+import Thundershowers from "./assets/weather-icon/Thunderstorm.png";
+import Thundershowershail from "./assets/weather-icon/Thunderstorm&hail.png";
+import Thundershowersheavyhail from "./assets/weather-icon/Thunderstorm&heavy hail.png";
 import Rainshowers from "./assets/weather-icon/rainshowers.png";
 
 const OneDayForcast = ({ weatherData }) => {
