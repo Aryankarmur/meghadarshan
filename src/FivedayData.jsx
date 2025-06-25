@@ -1,22 +1,22 @@
 import "./assets/css/FivedayData.css";
-import Clearsky from "./assets/weather icons/clear-sky.png";
-import Mainlyclear from "./assets/weather icons/cloudy.png";
-import Partlycloudy from "./assets/weather icons/partly-cloudy.png";
-import Fog from "./assets/weather icons/fog.png";
-import Depositingrimefog from "./assets/weather icons/rimefog.png";
-import Snow from "./assets/weather icons/snow.png";
-import Litedrizzle from "./assets/weather icons/litedrizzle.png";
-import Drizzle from "./assets/weather icons/drizzle.png";
-import Rain from "./assets/weather icons/rain.png";
-import Snowshowers from "./assets/weather icons/snowshowers.png";
-import Freezingdrizzle from "./assets/weather icons/freezingdrizzle.png";
-import Freezingrain from "./assets/weather icons/freezing-rain.png";
-import Lightrain from "./assets/weather icons/lightrain.png";
-import Lightsnow from "./assets/weather icons/lightsnow.png";
-import Thundershowers from "./assets/weather icons/thunderstorm.png";
-import Thundershowershail from "./assets/weather icons/thunderstorm&hail.png";
-import Thundershowersheavyhail from "./assets/weather icons/thunderstorm&heavy hail.png";
-import Rainshowers from "./assets/weather icons/rainshowers.png";
+import Clearsky from "./assets/weather-icons/clear-sky.png";
+import Mainlyclear from "./assets/weather-icons/cloudy.png";
+import Partlycloudy from "./assets/weather-icons/partly-cloudy.png";
+import Fog from "./assets/weather-icons/fog.png";
+import Depositingrimefog from "./assets/weather-icons/rimefog.png";
+import Snow from "./assets/weather-icons/snow.png";
+import Litedrizzle from "./assets/weather-icons/litedrizzle.png";
+import Drizzle from "./assets/weather-icons/drizzle.png";
+import Rain from "./assets/weather-icons/rain.png";
+import Snowshowers from "./assets/weather-icons/snowshowers.png";
+import Freezingdrizzle from "./assets/weather-icons/freezingdrizzle.png";
+import Freezingrain from "./assets/weather-icons/freezing-rain.png";
+import Lightrain from "./assets/weather-icons/lightrain.png";
+import Lightsnow from "./assets/weather-icons/lightsnow.png";
+import Thundershowers from "./assets/weather-icons/thunderstorm.png";
+import Thundershowershail from "./assets/weather-icons/thunderstorm&hail.png";
+import Thundershowersheavyhail from "./assets/weather-icons/thunderstorm&heavy hail.png";
+import Rainshowers from "./assets/weather-icons/rainshowers.png";
 
 const FivedayData = ({ fivedayWeatherData }) => {
       
