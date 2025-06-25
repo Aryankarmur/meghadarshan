@@ -17,7 +17,7 @@ import Thundershowers from "./assets/weather-icons/Thunderstorm.png";
 import Thundershowershail from "./assets/weather-icons/Thunderstorm&hail.png";
 import Thundershowersheavyhail from "./assets/weather-icons/Thunderstorm&heavy hail.png";
 import Rainshowers from "./assets/weather-icons/rainshowers.png";
-
+import wind from "./assets/weather-icons/wind.png";
 const Todayweather = ({ weatherData }) => {
   const weatherCode = weatherData?.current?.weather_code;
   function getWeatherData(code) {
@@ -236,7 +236,7 @@ const Todayweather = ({ weatherData }) => {
           <div className="weather-wind">
             <div>
               <img
-                src={"/src/assets/weather icons/wind.png"}
+                src={wind}
                 alt="wind image"
                 title="wind flow"
               />
