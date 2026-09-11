@@ -14,18 +14,6 @@ The project focuses on working with real-time API data, presenting current condi
 
 ---
 
-## 📸 Preview
-
-_Add a real screenshot of the application here._
-
-Example:
-
-![MeghDarshan Preview](./public/preview.png)
-
-> Replace the path with the actual location of your screenshot.
-
----
-
 ## 📌 About the Project
 
 MeghDarshan is a React-based weather application that allows users to search for a location and view weather information for that area.
