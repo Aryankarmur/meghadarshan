@@ -1,10 +1,132 @@
-body{
+:root {
+  --background: #5252c7;
+  --surface: rgba(255, 255, 255, 0.1);
+  --surface-secondary: rgba(255, 255, 255, 0.2);
+  --border: rgba(255, 255, 255, 0.2);
+  --text: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --primary: #5252c7;
+}
+
+body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background:linear-gradient(to top,#5252c7,#7878eb,#777ee1) no-repeat;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(to top, #5252c7, #7878eb, #777ee1) fixed;
+  color: var(--text);
   box-sizing: border-box;
+  min-height: 100vh;
 }
-::-webkit-scrollbar{
+
+* {
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
   display: none;
+}
+
+/* Error State UI */
+.error-state-container {
+  background-color: var(--surface);
+  color: var(--text);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+
+.error-state-container h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.error-state-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.retry-btn {
+  background-color: var(--text);
+  color: var(--background);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+
+.retry-btn:hover {
+  opacity: 0.9;
+}
+
+/* Skeleton Loader UI */
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.skeleton {
+  background: var(--surface);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-hero {
+  height: 350px;
+  width: 100%;
+}
+
+.skeleton-hourly {
+  height: 150px;
+  width: 100%;
+}
+
+.skeleton-fiveday {
+  height: 200px;
+  width: 100%;
 }

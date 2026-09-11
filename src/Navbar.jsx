@@ -1,82 +1,61 @@
-import { IoSearchSharp, IoLocationSharp } from "react-icons/io5";
+import { IoSearchSharp } from "react-icons/io5";
 import "./assets/css/Navbar.css";
-import { useEffect, useState } from "react";
-const Navbar = ({ getCityLocation }) => {
-  const [city, setCity] = useState("Delhi");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getCityLocation(city.toLocaleLowerCase());
-      console.log(data);
-    };
-    fetchData();
-  }, [city]);
-
-  // const handelcitySearch = async (e) => {
-  //   e.preventDefault();
-
-  //   if (city === "") {
-  //     alert("Please enter a city name");
-  //     return;
-  //   } else {
-  //       const data = await getCityLocation(city.toLocaleLowerCase());
-  //       e.target.reset(); // Reset the form after submission
-  //   }
-  // };
+const Navbar = ({ getCityLocation, isLoading }) => {
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const searchCity = e.target.city.value.trim();
+    if (searchCity && !isLoading) {
+      getCityLocation(searchCity.toLowerCase());
+      e.target.reset();
+    }
+  };
 
   return (
     <nav>
       <div className="maxcontant">
-        <h1>MeghDarshan</h1>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setCity(e.target.city.value);
-            e.target.reset();
-          }}
-        >
+        <a href="/" className="logo-link">
+          <h1>MeghDarshan</h1>
+        </a>
+        <form onSubmit={handleSearch} role="search">
+          <label htmlFor="desktop-city-search" className="visually-hidden">
+            Search for a city
+          </label>
           <input
+            id="desktop-city-search"
             name="city"
             type="search"
-            placeholder=" Search for a city "
-            // onChange={(e) => setCity(e.target.value)}
+            placeholder="Search for a city"
+            disabled={isLoading}
             required
+            aria-label="Search for a city"
           />
-          <button type="submit">
-            <IoSearchSharp />
+          <button type="submit" disabled={isLoading} aria-label="Submit search">
+            <IoSearchSharp aria-hidden="true" />
           </button>
         </form>
-        <div className="city">
-          <p>
-            <IoLocationSharp /> <span>{city.toUpperCase()}</span>
-          </p>
-        </div>
       </div>
       <div className="responsive">
         <div className="namecity">
-          <h1>MeghDarshan</h1>
-          <div className="city">
-            <p>
-              <IoLocationSharp /> <span>{city.toUpperCase()}</span>
-            </p>
-          </div>
+          <a href="/" className="logo-link">
+            <h1>MeghDarshan</h1>
+          </a>
         </div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setCity(e.target.city.value);
-            e.target.reset();
-          }}
-        >
+        <form onSubmit={handleSearch} role="search">
+          <label htmlFor="mobile-city-search" className="visually-hidden">
+            Search for a city
+          </label>
           <input
+            id="mobile-city-search"
             name="city"
             type="search"
-            placeholder=" Search for a city "
-            // onChange={(e) => setCity(e.target.value)}
+            placeholder="Search for a city"
+            disabled={isLoading}
             required
+            aria-label="Search for a city"
           />
-          <button type="submit">
-            <IoSearchSharp />
+          <button type="submit" disabled={isLoading} aria-label="Submit search">
+            <IoSearchSharp aria-hidden="true" />
           </button>
         </form>
       </div>
